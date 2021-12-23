@@ -82,8 +82,9 @@ class GiaoVienController extends Controller
 
         $tenLH = strtolower(preg_replace('/\s+/', '', $str));
         DB::update("UPDATE $tenLH set diemdanh = 0");
+        $url = 
         
-        $result = shell_exec('C:\Users\namke\AppData\Local\Programs\Python\Python39\python C:\xampp\htdocs\App-laravel\face-recognition-addtendace-system-web\public\main.py '. $string . ' ' . $tenLH);
+        $result = shell_exec('python main.py '. $string . ' ' . $tenLH);
         return redirect('giaovien');
     }
 }
