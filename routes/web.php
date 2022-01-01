@@ -24,12 +24,6 @@ use App\Http\Controllers\DSSVDiemDanhController;
 |
 */
 
-Route::get('asd', function () {
-    DB::insert('insert into toan_billgates (idLichHoc, MaSV) values (1, 1)');
-    echo public_path();
-    
-});
-
 Route::prefix('')->group(function () {
     Route::get('/', [TrangChuController::class, 'view']);
 });
